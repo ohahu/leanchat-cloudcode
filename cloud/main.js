@@ -17,6 +17,9 @@ function handleRequest(req, res, handleRelationFn) {
   }, mutil.cloudErrorFn(res));
 }
 
+AV.Cloud.define("hello", function (req, res) {
+  response.success("Hello world!");
+});
 AV.Cloud.define("addFriend", function (req, res) {
   handleRequest(req, res, muser.addFriendForBoth);
 });
