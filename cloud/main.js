@@ -20,6 +20,10 @@ function handleRequest(req, res, handleRelationFn) {
 AV.Cloud.define("hello", function (req, res) {
   res.success("Hello world!");
 });
+
+AV.Cloud.define("test", function (req, res) {
+  res.success("Hello world!");
+});
 AV.Cloud.define("addFriend", function (req, res) {
   handleRequest(req, res, muser.addFriendForBoth);
 });
